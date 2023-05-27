@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="menu.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Menu</h2>
+    <p>Select the dishes you want to order:</p>
+    
+    <div class="form-group">
+      <input type="text" class="form-control" id="search" placeholder="Search for a dish">
+    </div>
+    
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Restaurant 1</a>
+          </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+  <div class="checkbox">
+    <label><input type="checkbox" value=""><span class="item-name">Idly</span> - $5</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value=""><span class="item-name">Dosa</span> - $8</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value=""><span class="item-name">Pungu</span> - $10</label>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Restaurant 2</a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Full Meal</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Biriyani</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Curd</span> - $5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Restaurant 3</a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Noodels</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Manchuria</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Fast food</span> - $5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Restaurant 4</a>
+          </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Cool Drinks</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Falooda</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Hard Drinks</span> - $5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Restaurant 5</a>
+          </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Dish 1</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Dish 2</span> - $5</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="item-name">Dish 3</span> - $5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+   
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Cart</button>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Cart</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Dish Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Amount</th>
+               </tr>
+            </thead>
+
+         </table>
+         <b><p class="total-amount"></p></b>
+
+         <button id="pay" style="background-color: #008CBA;">Pay</button>
+
+<!-- Order Success Modal -->
+<div class="modal fade" id="orderSuccessModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Order Success</h4>
+      </div>
+      <div class="modal-body">
+        <p>Your order has been placed successfully.</p>
+        <input type="radio" >
+        <label >Cash On Delivery</label><br>
+        <p>Order Number: <span id="orderNumber"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+
+      </div>
+   </div>
+</div>
+</div>
+</body>
+</html>                

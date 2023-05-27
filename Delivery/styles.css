@@ -1,0 +1,66 @@
+/* Styles for the form */
+form {
+  margin-top: 20px;
+}
+
+/* Styles for the form fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styles for the form labels */
+label {
+  font-weight: bold;
+}
+
+/* Styles for the form input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Styles for the invalid feedback */
+.invalid-feedback {
+  color: red;
+  font-size: 12px;
+}
+
+/* Styles for the Submit and All Clear buttons */
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+/* Styles for the form heading */
+.text-center {
+  margin-bottom: 30px;
+}
+
+/* Styles for the container */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
